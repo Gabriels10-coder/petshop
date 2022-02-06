@@ -10,6 +10,7 @@
 
 <body>
     <form>
+        @csrf
         <section>
             <div>
                 <label>Nome do animal:</label>
