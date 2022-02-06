@@ -15,4 +15,5 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/',[HomeController::class,'index'])->name("home");
-Route::get('/cadastropet',[CreatePetController::class,'telaRegistro'])->name('registro.pet');
+Route::get('/cadastropet',[CreatePetController::class,'telaRegistro'])->name('registro.tela');
+Route::post('/cadastropet/registro',[CreatePetController::class,"Registro"])->name('registro.pet');
