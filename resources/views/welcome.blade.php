@@ -11,14 +11,7 @@
 </head>
 
 <body>
-    <form method="POST">
-        <div class="flex justify-content-center">
-            <div>
-                <input class="form-control form-control-sm " type="email">
-            </div>
-
-        </div>
-    </form>
+    <h1>Home</h1>
 </body>
 
 </html>
