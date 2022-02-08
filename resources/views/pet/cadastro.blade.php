@@ -12,9 +12,9 @@
 <body>
     <form method="POST" action="{{ route('registro.pet') }}">
         @csrf
-        <section class="container h-100">
-            <div class="d-flex flex-column align-items-center justify-content-center">
-            <div class="col-3 align-self-center">
+        <section class="container">
+            <div class="d-flex flex-column align-items-center ">
+            <div class="col-3 ">
                 <label class="form-label">Nome do animal:</label>
                 <input class="form-control" type="text" name="nome" placeholder="Insira o nome  do seu animal" />
             </div>
