@@ -12,30 +12,32 @@
 <body>
     <form method="POST" action="{{ route('registro.pet') }}">
         @csrf
-        <section class="container column align-items-center">
-            <div class="col">
+        <section class="container h-100">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="col-3 align-self-center">
                 <label class="form-label">Nome do animal:</label>
                 <input class="form-control" type="text" name="nome" placeholder="Insira o nome  do seu animal" />
             </div>
-            <div class="col">
+            <div class="col-3">
                 <label class="form-label">raça:</label>
                 <input class="form-control" type="text" name="raça" placeholder="Insira a raça do seu animal" />
             </div>
-            <div class="col">
+            <div class="col-3">
                 <label class="form-label">Peso:</label>
                 <input class="form-control" type="text" name="peso" placeholder="Insira o peso atual do animal" />
             </div>
-            <div class="col">
+            <div class="col-3">
                 <label class="form-label">Idade:</label>
                 <input class="form-control" type="number" name="idade" placeholder="Insira a idade do seu animal" />
             </div>
-            <div class="col">
+            <div class="col-3">
                 <label class="form-label">Dono:</label>
-                <input class="form-control "  type="text" name="dono" placeholder="Quem é o dono" />
+                <input class="form-control" type="text" name="dono" placeholder="Quem é o dono" />
             </div>
-            <div class="col">
+            <div class="col-3">
                 <button class="btn btn-outline-primary " type="submit">Enviar</button>
             </div>
+        </div>
         </section>
     </form>
 
