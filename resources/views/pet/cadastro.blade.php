@@ -7,14 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro</title>
     <link rel='stylesheet' href="{{ asset('bootstrap/style.css') }}" />
+    <link rel="stylesheet" type="text/css"href="css/app.css">
+
 </head>
 
 <body>
     <form method="POST" action="{{ route('registro.pet') }}">
         @csrf
-        <section class="container">
+        <section id="test" class="container ">
             <div class="d-flex flex-column align-items-center ">
             <div class="col-3 ">
+                <h1>test</h1>
                 <label class="form-label">Nome do animal:</label>
                 <input class="form-control" type="text" name="nome" placeholder="Insira o nome  do seu animal" />
             </div>
