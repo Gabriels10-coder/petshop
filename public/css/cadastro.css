@@ -1,3 +1,9 @@
-h1{
-  
+#sucesso{
+    width:110%;
+    border-radius: 10px;
+    height:50px;
 }
+.container-btn{
+    margin-top: 40px;
+}
+
