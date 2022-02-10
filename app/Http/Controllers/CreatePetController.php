@@ -11,6 +11,7 @@ class CreatePetController extends Controller
     //retorna a view de cadastro
     public function telaRegistro()
     {
+
         return  view('pet.cadastro');
     }
 
@@ -19,7 +20,14 @@ class CreatePetController extends Controller
 
     {
         $pet = new Table_animais();
-        $pet->create($request->all());
-        return Redirect::to('/');
+        $pet->created([
+            'nome'=> $request->nome,
+            'raça'=>$request->raca,
+            'peso'=>$request->peso,
+            'idade'=>$request->idade,
+            'dono'=> $request->dono
+        ]);
+
+        return redirect('/');
     }
 }
