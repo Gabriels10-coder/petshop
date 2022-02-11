@@ -7,7 +7,10 @@
                 <a>petshop</a>
             </div>
             <div>
-                   <a>Entre na s</a>
+                <a href="">Entre na sua conta</a>
+                <a href="">Produtos</a>
+                <a href="">Serviços</a>
+                <a href="{{ route('registro.tela') }}">Criar conta</a>
             </div>
 
         </div>
