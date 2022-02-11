@@ -8,13 +8,14 @@
     <!--------- Google Fonts !------------>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
     <!--------- End Google fonts !------------>
     <!---------------! Bootstrap css !----------------->
     <link rel="stylesheet" href="{{ asset('bootstrap/style.css') }}" />
     <!--------------! End Bootstrap css !------------->
     <!--------------! CSS general !----------------->
     <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
+    <link rel="stylesheet" href="{{asset('css/navbar.css')}}"/>
     <!--------------! End CSS general !------------->
     <!-------------!  Title for page  !-------------->
     <title>@yield('titulo')</title>
