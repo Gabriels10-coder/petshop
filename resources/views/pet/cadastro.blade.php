@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registro</title>
-    <link rel='stylesheet' href="{{ asset('bootstrap/style.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/cadastro.css') }}">
-
-</head>
-
-<body>
+@extends('layouts.master')
+@section('titulo','Cadastro pets')
+@section('conteudo')
     <form method="POST" action="{{ route('registro.pet') }}">
         @csrf
         <section id="test" class="container ">
@@ -41,15 +30,12 @@
                 <div class="col-6 container-btn">
                     <button class="btn btn-outline-primary" id="sucesso" type="submit">Enviar</button>
                 </div>
-               
+
             </div>
         </section>
 
     </form>
-    <script src="{{ asset('jquery/jquery.js') }}"></script>
-    <script src="{{ asset('bootstrap/bootstrap.js') }}"></script>
-
-</body>
+    @endsection
 
 
-</html>
+
