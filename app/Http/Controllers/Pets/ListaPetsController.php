@@ -13,7 +13,12 @@ class ListaPetsController extends Controller
     {
         //trago a lista
         $lista =  Table_animais::all();
+
         //retorno a view e mando a lista junto
+
         return view('pet.lista', ['pets' => $lista]);
+
+ 
     }
+
 }

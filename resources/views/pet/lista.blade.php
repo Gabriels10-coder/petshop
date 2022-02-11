@@ -17,6 +17,7 @@
             <p>{{ $pet->peso }}</p>
             <p>{{ $pet->idade }}</p>
             <p>{{ $pet->dono }}</p>
+            <button>delete</button>
             <!------End lista !---->
         @endforeach
     </div>

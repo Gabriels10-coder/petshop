@@ -28,9 +28,10 @@ class CreatePetController extends Controller
             'idade' => $request->idade,
             'dono' => $request->dono
         ]);
+        
 
 
-        return redirect('/');
+        return redirect('/listapets');
     }
 }
 //c
