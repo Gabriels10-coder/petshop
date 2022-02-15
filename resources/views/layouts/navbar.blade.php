@@ -35,7 +35,6 @@
                         <li><a class="dropdown-item hover-itens-dropdown" href="#">Banho</a></li>
                         <li><a class="dropdown-item hover-itens-dropdown" href="#">Veterinario</a></li>
                     </ul>
-
                 </div>
 
             </div>
