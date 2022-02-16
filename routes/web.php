@@ -19,4 +19,5 @@ Route::get('/',[HomeController::class,'index'])->name("home");
 Route::get('/cadastropet',[CreatePetController::class,'telaRegistro'])->name('registro.tela');
 Route::post('/cadastropet/registro',[CreatePetController::class,"Registro"])->name('registro.pet');
 Route::get('/listapets',[ListaPetsController::class,"ViewListaPets"])->name('lista.tela');
+Route::get('/testepet',[ListaPetsController::class,"lista"])->name('testepet');
 
