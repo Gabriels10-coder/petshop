@@ -45,12 +45,12 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link fontlinks" id="criarconta">Criar conta</a>
-                        <a class="nav-item nav-link fontlinks" href="{{ route('registro.tela') }}"
+                        <a class="nav-item nav-link fontlinks"href="{{ route('registro.tela') }}"id="criarconta">Criar conta</a>
+                        <a class="nav-item nav-link fontlinks" href="#"
                             id="entrarnaconta">Entre na sua conta</a>
                         <!--------Dropdown produtos !-------->
                         <div class="dropdown ">
-                            <a class="nav-item nav-link navbar-toggle fontlinks" href="#" role="button" id="produtos"
+                            <a class="nav-item nav-link navbar-toggle fontlinks"  role="button" id="produtos"
                                 data-bs-toggle="dropdown" aria-expanded="false">Produtos</a>
                             <ul class="dropdown-menu" aria-labelledby="produtos">
                                 <li><a class="dropdown-item hover-itens-dropdown" href="#">Petiscos</a></li>

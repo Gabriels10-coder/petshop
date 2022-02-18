@@ -11,6 +11,8 @@ function validacaoPets() {
     let validanome = document.getElementById("validanome");
     let validaraca = document.getElementById("validaraca");
     let validapeso = document.getElementById("validapeso");
+    let validaidade = document.getElementById("validaidade");
+    let validadono = document.getElementById("validadono");
     //-----------FIM------------//
     //button submit
     let btn = document.getElementById("btn-submit");
@@ -38,10 +40,22 @@ function validacaoPets() {
         validapeso.style.color = "#ff0000";
         btn.disabled = true;
         return;
+    }
+    if (idade != 0) {
+        validaidade.innerText = "Campo obrigatório";
+        validaidade.style.color = "#ff0000";
+        btn.disabled = true;
+        return;
+    }
+    if (dono == "") {
+        validadono.innerText = "Campo obrigatório";
+        validadono.style.color = "#ff0000";
+        btn.disabled = true;
+        return;
     } else {
         validanome.innerText = "";
         validaraca.innerText = "";
-        validapeso.innerText="";
+        validapeso.innerText = "";
         btn.disabled = false;
     }
 }
