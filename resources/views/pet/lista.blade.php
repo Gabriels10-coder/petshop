@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <!--Lista de pets !------>
     <div style="text-align: center">
         @foreach ($pets as $pet)
@@ -22,5 +23,10 @@
         @endforeach
     </div>
 </body>
+<script>
+    var test ='test';
+    var test= 'test';
+    var test = 'test';
+</script>
 
 </html>

@@ -1,41 +1,44 @@
 @extends('layouts.master')
-@section('titulo','Cadastro pets')
+
 @section('conteudo')
     <form method="POST" action="{{ route('registro.pet') }}">
         @csrf
-        <section id="test" class="container ">
+        <section class="container distnavbar ">
             <div class="d-flex flex-column align-items-center ">
                 <div class="col-6 ">
-                    <h1 id="test">test</h1>
                     <label class="form-label">Nome do animal:</label>
-                    <input class="form-control" type="text" name="nome" placeholder="Insira o nome  do seu animal" />
+                    <input class="form-control" type="text" name="nome" onkeyup="validacaoPets()"
+                        placeholder="Insira o nome  do seu animal" id="nomeanimal" re />
+                    <p id="validanome"></p>
                 </div>
                 <div class="col-6">
                     <label class="form-label">raça:</label>
-                    <input class="form-control" type="text" name="raca" placeholder="Insira a raça do seu animal" />
+                    <input class="form-control" type="text" name="raca" placeholder="Insira a raça do seu animal"
+                        id="raca" onkeyup="validacaoPets()"/>
+                    <p id="validaraca"></p>
                 </div>
                 <div class="col-6">
                     <label class="form-label">Peso:</label>
-                    <input class="form-control" type="text" name="peso" placeholder="Insira o peso atual do animal" />
+                    <input class="form-control" type="text"onkeyup="validacaoPets()" name="peso" placeholder="Insira o peso atual do animal"
+                        id="peso" />
+                        <p id="validapeso"></p>
                 </div>
                 <div class="col-6">
                     <label class="form-label">Idade:</label>
-                    <input class="form-control" type="number" name="idade"
-                        placeholder="Insira a idade do seu animal" />
+                    <input class="form-control" type="number" name="idade" placeholder="Insira a idade do seu animal"
+                        id="idade" />
+
                 </div>
                 <div class="col-6">
                     <label class="form-label">Dono:</label>
-                    <input class="form-control" type="text" name="dono" placeholder="Quem é o dono" />
+                    <input class="form-control" type="text" name="dono" placeholder="Quem é o dono" id="dono" />
                 </div>
                 <div class="col-6 container-btn">
-                    <button class="btn btn-outline-primary" id="sucesso" type="submit">Enviar</button>
+                    <button id="btn-submit" class="btn btn-outline-primary" id="sucesso" type="submit">Enviar</button>
                 </div>
 
             </div>
         </section>
 
     </form>
-    @endsection
-
-
-
+@endsection

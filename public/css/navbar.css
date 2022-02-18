@@ -1,6 +1,13 @@
-a{
-    color:yellow;
+.fontlinks {
+    color: #fff;
 }
-li{
-    color:yellow;
+
+.fontlinks:hover,.fontlinks:focus {
+    color: #000;
+}
+.hover-itens-dropdown:hover{
+    background-color: #c39b15;
+    color: #fff;
+    transition-duration: 0.2s;
+   
 }
