@@ -12,4 +12,11 @@
 .p{
     text-align: center;
 }
+.error{
+    margin-top: 8px;
+    font-weight: bold;
+    color:#ff0000;
+}
+
+
 
