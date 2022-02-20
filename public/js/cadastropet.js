@@ -66,13 +66,14 @@ function validaidade() {
 }
 //-----------END------------//
 //function to validate owner
-function validadono(){
+function validadono() {
     let dono = document.getElementById("dono").value;
-    if(dono==""){
+    if (dono == "") {
         validadonoanimal.innerText = "Campo obrigatório";
-        btn.disabled=true;
-    }else{
-        validadonoanimal.innerText ="";
-        btn.disabled=false;
+        btn.disabled = true;
+    } else {
+        validadonoanimal.innerText = "";
+        btn.disabled = false;
     }
 }
+//-----------END------------//
