@@ -15,8 +15,8 @@
     <!--------------! End Bootstrap css !------------->
     <!--------------! CSS general !----------------->
     <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}"/>
-    <link rel="stylesheet" href="{{asset('css/home.css')}}"/>
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
     <!--------------! End CSS general !------------->
     <!-------------!  Title for page  !-------------->
     <title>@yield('titulo')</title>
@@ -45,15 +45,16 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link fontlinks"href="{{ route('registro.tela') }}"id="criarconta">Criar conta</a>
-                        <a class="nav-item nav-link fontlinks" href="#"
-                            id="entrarnaconta">Entre na sua conta</a>
+                        <a class="nav-item nav-link fontlinks" href="{{ route('registro.tela') }}"
+                            id="criarconta">Criar conta</a>
+                        <a class="nav-item nav-link fontlinks" href="#" id="entrarnaconta">Entre na sua conta</a>
                         <!--------Dropdown produtos !-------->
                         <div class="dropdown ">
-                            <a class="nav-item nav-link navbar-toggle fontlinks"  role="button" id="produtos"
+                            <a class="nav-item nav-link navbar-toggle fontlinks" role="button" id="produtos"
                                 data-bs-toggle="dropdown" aria-expanded="false">Produtos</a>
                             <ul class="dropdown-menu" aria-labelledby="produtos">
-                                <li><a class="dropdown-item hover-itens-dropdown" href="#">Petiscos</a></li>
+                                <li><a class="dropdown-item hover-itens-dropdown"
+                                        href="{{ route('lista.tela') }}">Petiscos</a></li>
                                 <li><a class="dropdown-item hover-itens-dropdown" href="#">Brinquedos</a></li>
                                 <li><a class="dropdown-item hover-itens-dropdown" href="#">Remédios</a></li>
                             </ul>
@@ -91,7 +92,8 @@
 <!---------! END Import Scripts !---------->
 <script src="{{ asset('jquery/jquery.js') }}"></script>
 <script src="{{ asset('bootstrap/bootstrap.js') }}"></script>
-<script src="{{ asset('js/utils.js') }}"></script>
+<script src="{{ asset('js/cadastropet.js') }}"></script>
+<script src="{{ asset('js/listapet.js') }}"></script>
 <!---------! END Import Scripts !---------->
 
 </html>
