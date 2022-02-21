@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('titulo','Cadastro de  pets')
 @section('conteudo')
     <form method="POST" action="{{ route('registro.pet') }}">
         @csrf
