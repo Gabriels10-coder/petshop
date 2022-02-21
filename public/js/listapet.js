@@ -20,6 +20,15 @@ $.ajax({
     },
 });
 
+$.ajax({
+    type: "GET",
+    url: "https://viacep.com.br/ws/13323452/json/",
+    dataType: "json",
+    success: (data) => {
+        console.log(data)
+        document.getElementById("texto").innerHTML = data.logradouro;
+    },
+});
 
 
 //function aprendida pra checkar tudo
@@ -34,8 +43,6 @@ $.ajax({
 //         }
 //     })
 // }
-
-
 
 // let todos = document.querySelectorAll(".campos");
 
