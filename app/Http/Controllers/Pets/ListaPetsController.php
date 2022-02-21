@@ -20,12 +20,12 @@ class ListaPetsController extends Controller
 
         return view('pet.lista');
     }
-//     public function jsonlist()
-//     {
+    public function jsonlist()
+    {
 
-//         $listaanimal = Table_animais::all();
-//         $convertido = json_encode($listaanimal);
+        $listaanimal = Table_animais::all();
+        $convertido = json_encode($listaanimal);
 
-//             return response()->json($convertido,200);
-//     }
+            return response()->json($convertido,200);
+    }
  }
