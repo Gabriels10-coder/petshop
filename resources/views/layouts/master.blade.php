@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('bootstrap/style.css') }}" />
     <!--------------! End Bootstrap css !------------->
     <!--------------! CSS general !----------------->
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
@@ -47,7 +48,7 @@
                     <div class="navbar-nav">
                         <a class="nav-item nav-link fontlinks" href="{{ route('registro.tela') }}"
                             id="criarconta">Criar conta</a>
-                        <a class="nav-item nav-link fontlinks" href="#" id="entrarnaconta">Entre na sua conta</a>
+                        <a class="nav-item nav-link fontlinks" href="{{route('home')}}" id="entrarnaconta">Entre na sua conta</a>
                         <!--------Dropdown produtos !-------->
                         <div class="dropdown ">
                             <a class="nav-item nav-link navbar-toggle fontlinks" role="button" id="produtos"
@@ -92,8 +93,7 @@
 <!---------! END Import Scripts !---------->
 <script src="{{ asset('jquery/jquery.js') }}"></script>
 <script src="{{ asset('bootstrap/bootstrap.js') }}"></script>
-<script src="{{ asset('js/cadastropet.js') }}"></script>
-<script src="{{ asset('js/listapet.js') }}"></script>
+@yield('scripts')
 <!---------! END Import Scripts !---------->
 
 </html>
