@@ -24,9 +24,7 @@
     </div>
 </body>
 <script>
-    var test ='test';
-    var test= 'test';
-    var test = 'test';
+    var cont = 0
 </script>
 
 </html>
