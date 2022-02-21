@@ -20,12 +20,12 @@ class ListaPetsController extends Controller
 
         return view('pet.lista', ['pets' => $lista]);
     }
-
-    public function lista()
+    public function jsonlist()
     {
-        $listaJson = DB::table('table_animais');
-        $filtrado = $listaJson->where('idade','>',14)->first();
 
-      return response()->json($filtrado,200);
+        $listaanimal = Table_animais::all();
+        $convertido = json_encode($listaanimal);
+
+            return response()->json($convertido,200);
     }
 }
