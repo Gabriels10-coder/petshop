@@ -15,7 +15,29 @@ $.ajax({
             createidade.innerHTML = element.idade;
 
             section.appendChild(createnome);
-            section.appendChild(createidade)
+            section.appendChild(createidade);
         });
     },
 });
+//function aprendida pra checkar tudo
+// function checkatudo(list, btn) {
+//     btn.addEventListener('change', () => {
+//         for (i = 0; i < list.length; i++) {
+//             if (btn.checked == true) {
+//                 list[i].checked = true;
+//             } else if (btn.checked == false) {
+//                 list[i].checked = false;
+//             }
+//         }
+//     })
+// }
+
+
+
+// let todos = document.querySelectorAll(".campos");
+
+// let btna = document.getElementById("all");
+// let opcoes = todos[0];
+// let btnopcoes = document.querySelectorAll('#opcoes')
+// checkatudo(todos, btna);
+// checkatudo(btnopcoes, opcoes)

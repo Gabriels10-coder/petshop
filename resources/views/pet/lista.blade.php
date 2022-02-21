@@ -6,23 +6,24 @@
     </section>
     <button id="btn-submit">trazer</button>
 
-<body>
+    <body>
+        <div>
+            <label for="">todos</label>
+            <input type="checkbox" id="all" name="all" />
+           
+        </div>
+        <div>
+            <label for="">opcoes</label>
+            <input type="checkbox" class="campos"id="opcoes" name="permission[]" />
+            <input type="checkbox" class="campos"id="opcoes" name="permission[]" />
+            <input type="checkbox" class="campos"id="opcoes" name="permission[]" />
+            <input type="checkbox" class="campos"id="opcoes" name="permission[]" />
+            <input type="checkbox" class="campos"id="opcoes" name="permission[]" />
+            <input type="checkbox" class="campos"id="opcoes" name="permission[]" />
+        </div>
 
-    <!--Lista de pets !------>
-    <div style="text-align: center">
-        @foreach ($pets as $pet)
-            <p>{{ $pet->nome }}</p>
-            <p>{{ $pet->raca }}</p>
-            <p>{{ $pet->peso }}</p>
-            <p>{{ $pet->idade }}</p>
-            <p>{{ $pet->dono }}</p>
-            <button>delete</button>
-            <!------End lista !---->
-        @endforeach
-    </div>
-</body>
-<script>
-    var cont = 0
-</script>
+    </body>
 
-</html>
+
+
+    </html>

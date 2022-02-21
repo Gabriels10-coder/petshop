@@ -1,20 +1,19 @@
-#sucesso{
-    width:110%;
+#sucesso {
+    width: 110%;
     border-radius: 10px;
-    height:50px;
+    height: 50px;
 }
 
-.distnavbar{
+.distnavbar {
     margin-top: 100px;
 }
-.p{
+
+.p {
     text-align: center;
 }
-.error{
+
+.error {
     margin-top: 8px;
     font-weight: bold;
-    color:#ff0000;
+    color: #ff0000;
 }
-
-
-
