@@ -19,6 +19,9 @@ $.ajax({
         });
     },
 });
+
+
+
 //function aprendida pra checkar tudo
 // function checkatudo(list, btn) {
 //     btn.addEventListener('change', () => {
