@@ -1,15 +1,19 @@
-#sucesso{
-    width:110%;
-    border-radius: 10px;
-    height:50px;
-}
-.container-btn{
-    margin-top: 100px;
-}
-.distnavbar{
-    margin-top: 100px;
-}
-.p{
-    text-align: center;
-}
-
+    #sucesso {
+        width: 110%;
+        border-radius: 10px;
+        height: 50px;
+    }
+    
+    .distnavbar {
+        margin-top: 100px;
+    }
+    
+    .p {
+        text-align: center;
+    }
+    
+    .error {
+        margin-top: 8px;
+        font-weight: bold;
+        color: #ff0000;
+    }
