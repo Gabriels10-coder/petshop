@@ -5,4 +5,12 @@
         <h1 id='texto'></h1>
     </section>
 
-@endsection
+    @endsection
+    @section('scripts')
+    <script src="{{ asset('js/listapet.js') }}"></script>
+    @endsection
+
+
+
+
+

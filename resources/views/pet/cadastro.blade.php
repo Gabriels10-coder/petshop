@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('titulo','Cadastro de  pets')
+@section('titulo', 'Cadastro de pets')
 @section('conteudo')
     <form method="POST" action="{{ route('registro.pet') }}">
         @csrf
@@ -11,12 +11,12 @@
                     <p class="error" id="validanome"></p>
 
                 </div>
-                <div class="col-6">
+                <div class="col-6 ">
                     <label class="form-label">Raça:</label>
                     <input class="form-control" type="text" name="raca" id="raca" onkeyup="validaraca()" />
                     <p class="error" id="validaraca"></p>
                 </div>
-                <div class="col-6">
+                <div class="col-6 ">
                     <label class="form-label">Peso:</label>
                     <input class="form-control" type="text" onkeyup="validapeso()" name="peso" id="peso" />
                     <p class="error" id="validapeso"></p>
@@ -32,11 +32,14 @@
                     <p class="error" id="validadono"></p>
                 </div>
                 <div class="col-6 container-btn">
-                    <button id="btn-submit" class="btn btn-outline-primary" id="sucesso" type="submit">Enviar</button>
+                    <button id="btn-submit" class="btn btn-outline-primary" type="submit">Enviar</button>
                 </div>
 
             </div>
         </section>
 
     </form>
+@endsection
+@section('scripts')
+    <script src="{{ asset('js/cadastropet.js') }}"></script>
 @endsection
