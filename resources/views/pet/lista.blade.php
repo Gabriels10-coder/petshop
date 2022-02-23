@@ -4,6 +4,15 @@
     <section id="section" style="margin-top: 200px">
         <h1 id='texto'></h1>
     </section>
+    <label for="">opcoes</label>
+    <input type="checkbox" id="tudo" />
+    <input type="checkbox" id="opcoes" />
+    <input type="checkbox" id="opcoes" />
+    <input type="checkbox" id="opcoes" />
+    <input type="checkbox" id="opcoes" />
+    <input type="checkbox" id="opcoes" />
+    <input type="checkbox" id="opcoes" />
+    
 
     @endsection
     @section('scripts')

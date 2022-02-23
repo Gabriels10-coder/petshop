@@ -1,5 +1,6 @@
 let nome = document.getElementById("nome");
 let idade = document.getElementById("idade");
+
 $.ajax({
     type: "GET",
     url: "http://127.0.0.1:8000/testepet",
@@ -25,30 +26,31 @@ $.ajax({
     url: "https://viacep.com.br/ws/13323452/json/",
     dataType: "json",
     success: (data) => {
-        console.log(data)
+        console.log(data);
         document.getElementById("texto").innerHTML = data.logradouro;
     },
 });
 
-
-
 //function aprendida pra checkar tudo
-// function checkatudo(list, btn) {
-//     btn.addEventListener('change', () => {
-//         for (i = 0; i < list.length; i++) {
-//             if (btn.checked == true) {
-//                 list[i].checked = true;
-//             } else if (btn.checked == false) {
-//                 list[i].checked = false;
-//             }
-//         }
-//     })
-// }
 
-// let todos = document.querySelectorAll(".campos");
+function checkatudo(list, btn) {
+    btn.addEventListener("change", () => {
+        for (i = 0; i < list.length; i++) {
+            if (btn.checked == true) {
+                list[i].checked = true;
 
-// let btna = document.getElementById("all");
-// let opcoes = todos[0];
-// let btnopcoes = document.querySelectorAll('#opcoes')
-// checkatudo(todos, btna);
-// checkatudo(btnopcoes, opcoes)
+            } else if (list[i].checked == true) {
+                btn.checked = false
+            } else if (btn.checked == false) {
+                list[i].checked = false;
+            }
+
+        }
+    });
+}
+
+let botaop = document.getElementById("tudo");
+let lista = document.querySelectorAll("#opcoes");
+
+
+checkatudo(lista, botaop);
