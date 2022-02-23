@@ -34,23 +34,41 @@ $.ajax({
 //function aprendida pra checkar tudo
 
 function checkatudo(list, btn) {
+    //Checkar tudo atráves do button principal
     btn.addEventListener("change", () => {
         for (i = 0; i < list.length; i++) {
             if (btn.checked == true) {
                 list[i].checked = true;
-
-            } else if (list[i].checked == true) {
-                btn.checked = false
-            } else if (btn.checked == false) {
+            } else {
                 list[i].checked = false;
             }
-
         }
     });
+
 }
 
-let botaop = document.getElementById("tudo");
+//function checkar itens do meio, checka o principal
+
+function check(listButtons, buttonprincipal) {
+    for (i = 0; i < listButtons.length; i++) {
+        listButtons[i].addEventListener("change", () => {
+            for (i = 0; i < listButtons.length; i++) {
+                if (listButtons[i].checked == true) {
+                    buttonprincipal.checked = true;
+
+                } else if (listButtons[i].checked < 0) {
+                    buttonprincipal.checked = false;
+                }
+
+
+            }
+        })
+    }
+}
 let lista = document.querySelectorAll("#opcoes");
 
+let botaop = document.querySelector("#tudo");
 
+
+check(lista, botaop)
 checkatudo(lista, botaop);
