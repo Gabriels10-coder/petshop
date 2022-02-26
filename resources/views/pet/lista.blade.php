@@ -4,7 +4,7 @@
     <section id="section" style="margin-top: 200px">
         <h1 id='texto'></h1>
     </section>
-    <label for="">opcoes</label>
+    <label for="">opcoesa</label>
     <input type="checkbox" id="tudo"  />
     <input type="checkbox" id="opcoes"  />
     <input type="checkbox" id="opcoes" />
@@ -12,11 +12,11 @@
     <input type="checkbox" id="opcoes" />
     <input type="checkbox" id="opcoes" />
     <input type="checkbox" id="opcoes" />
-    
+
 
     @endsection
     @section('scripts')
-    <script src="{{ asset('js/listapet.js') }}"></script>
+   <script src="{{asset('js/listapet.js')}}"></script>
     @endsection
 
 

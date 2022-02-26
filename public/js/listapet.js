@@ -1,6 +1,6 @@
 let nome = document.getElementById("nome");
 let idade = document.getElementById("idade");
-
+console.log('test')
 $.ajax({
     type: "GET",
     url: "http://127.0.0.1:8000/testepet",
