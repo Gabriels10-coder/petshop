@@ -26,30 +26,49 @@ $.ajax({
     url: "https://viacep.com.br/ws/13323452/json/",
     dataType: "json",
     success: (data) => {
-        console.log(data)
+        console.log(data);
         document.getElementById("texto").innerHTML = data.logradouro;
     },
 });
 
-
-
 //function aprendida pra checkar tudo
-// function checkatudo(list, btn) {
-//     btn.addEventListener('change', () => {
-//         for (i = 0; i < list.length; i++) {
-//             if (btn.checked == true) {
-//                 list[i].checked = true;
-//             } else if (btn.checked == false) {
-//                 list[i].checked = false;
-//             }
-//         }
-//     })
-// }
 
-// let todos = document.querySelectorAll(".campos");
+function checkatudo(list, btn) {
+    //Checkar tudo atráves do button principal
+    btn.addEventListener("change", () => {
+        for (i = 0; i < list.length; i++) {
+            if (btn.checked == true) {
+                list[i].checked = true;
+            } else {
+                list[i].checked = false;
+            }
+        }
+    });
 
-// let btna = document.getElementById("all");
-// let opcoes = todos[0];
-// let btnopcoes = document.querySelectorAll('#opcoes')
-// checkatudo(todos, btna);
-// checkatudo(btnopcoes, opcoes)
+}
+
+//function checkar itens do meio, checka o principal
+
+function check(listButtons, buttonprincipal) {
+    for (i = 0; i < listButtons.length; i++) {
+        listButtons[i].addEventListener("change", () => {
+            for (i = 0; i < listButtons.length; i++) {
+                if (listButtons[i].checked == true) {
+                    buttonprincipal.checked = true;
+
+                } else if (listButtons[i].checked < 0) {
+                    buttonprincipal.checked = false;
+                }
+
+
+            }
+        })
+    }
+}
+let lista = document.querySelectorAll("#opcoes");
+
+let botaop = document.querySelector("#tudo");
+
+
+check(lista, botaop)
+checkatudo(lista, botaop);
