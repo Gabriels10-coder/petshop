@@ -1,74 +1,43 @@
-let nome = document.getElementById("nome");
-let idade = document.getElementById("idade");
-console.log('test')
-$.ajax({
-    type: "GET",
-    url: "http://127.0.0.1:8000/testepet",
-    dataType: "json",
-    success: (data) => {
-        let section = document.getElementById("section");
-        let convertido = JSON.parse(data);
+// async function tablePets() {
+//     try {
+//         let tbody = document.getElementById("tbody");
+//         await $.ajax({
+//             type: "GET",
+//             url: "http://petshop.test/testepet",
+//             responseType: "json",
+//             success: (data) => {
+//                 let responseconv = JSON.parse(data);
+//                 console.log(responseconv);
+//                 responseconv.map((element) => {
+//                     let linha = document.createElement("tr");
+//                     let id = document.createElement("td");
+//                     let nome = document.createElement("td");
+//                     let idade = document.createElement("td");
+//                     let raça = document.createElement("td");
+//                     let peso = document.createElement("td");
+//                     let dono = document.createElement("td");
+//                     let deletar = document.createElement("button");
+//                     id.innerText = element.id;
+//                     nome.innerText = element.nome;
+//                     idade.innerText = element.idade;
+//                     raça.innerText = element.raça;
+//                     peso.innerText = element.peso;
+//                     dono.innerText = element.dono;
+//                     linha.append(id)
+//                     linha.append(nome);
+//                     linha.append(idade);
+//                     linha.append(raça);
+//                     linha.append(peso);
+//                     linha.append(dono);
 
-        convertido.forEach((element) => {
-            let createnome = document.createElement("h1");
-            let createidade = document.createElement("h1");
-            createnome.innerHTML = element.nome;
-            createidade.innerHTML = element.idade;
-
-            section.appendChild(createnome);
-            section.appendChild(createidade);
-        });
-    },
-});
-
-$.ajax({
-    type: "GET",
-    url: "https://viacep.com.br/ws/13323452/json/",
-    dataType: "json",
-    success: (data) => {
-        console.log(data);
-        document.getElementById("texto").innerHTML = data.logradouro;
-    },
-});
-
-//function aprendida pra checkar tudo
-
-function checkatudo(list, btn) {
-    //Checkar tudo atráves do button principal
-    btn.addEventListener("change", () => {
-        for (i = 0; i < list.length; i++) {
-            if (btn.checked == true) {
-                list[i].checked = true;
-            } else {
-                list[i].checked = false;
-            }
-        }
-    });
-
-}
-
-//function checkar itens do meio, checka o principal
-
-function check(listButtons, buttonprincipal) {
-    for (i = 0; i < listButtons.length; i++) {
-        listButtons[i].addEventListener("change", () => {
-            for (i = 0; i < listButtons.length; i++) {
-                if (listButtons[i].checked == true) {
-                    buttonprincipal.checked = true;
-
-                } else if (listButtons[i].checked < 0) {
-                    buttonprincipal.checked = false;
-                }
-
-
-            }
-        })
-    }
-}
-let lista = document.querySelectorAll("#opcoes");
-
-let botaop = document.querySelector("#tudo");
-
-
-check(lista, botaop)
-checkatudo(lista, botaop);
+//                     tbody.append(linha);
+//                 });
+//             },
+//         });
+//     } catch (err) {
+//         console.log(
+//             err.statusText === "Not Found" ? "Rota não encontrada" : ""
+//         );
+//     }
+// }
+// tablePets();

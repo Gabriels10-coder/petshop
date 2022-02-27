@@ -13,19 +13,19 @@ class ListaPetsController extends Controller
     public function ViewListaPets()
     {
         //trago a lista
-        
 
+        $lista = Table_animais::get();
 
         //retorno a view e mando a lista junto
 
-        return view('pet.lista');
+        return view('pet.lista',["animais"=>$lista]);
     }
     public function jsonlist()
     {
 
         $listaanimal = Table_animais::all();
-        $convertido = json_encode($listaanimal);
+        $conversao  =  json_encode($listaanimal);
 
-            return response()->json($convertido,200);
+        return response()->json($conversao, 200);
     }
- }
+}

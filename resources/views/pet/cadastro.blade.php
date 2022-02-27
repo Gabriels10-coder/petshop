@@ -41,5 +41,8 @@
     </form>
 @endsection
 @section('scripts')
-    <script src="{{ asset('js/cadastropet.js') }}"></script>
+    <script src="{{asset('js/cadastropet.js')}}" ></script>
+    <script>
+
+    </script>
 @endsection

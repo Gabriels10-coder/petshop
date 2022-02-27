@@ -5,7 +5,7 @@ let validapesoanimal = document.getElementById("validapeso");
 let validaidadeanimal = document.getElementById("validaidade");
 let validadonoanimal = document.getElementById("validadono");
 //-----------END------------//
-console.log('test')
+
 //button submit
 let btn = document.getElementById("btn-submit");
 //-----------END------------//

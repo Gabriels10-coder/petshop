@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
+    <link rel="stylesheet" href="{{asset('css/lista.css')}}"/>
     <!--------------! End CSS general !------------->
     <!-------------!  Title for page  !-------------->
     <title>@yield('titulo')</title>
