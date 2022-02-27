@@ -2,6 +2,7 @@
 
 use  App\Http\Controllers\Pets\CreatePetController;
 use App\Http\Controllers\Pets\ListaPetsController;
+use App\Http\Controllers\pets\DeleteControllerPets;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 /*
@@ -20,4 +21,5 @@ Route::get('/cadastropet',[CreatePetController::class,'telaRegistro'])->name('re
 Route::post('/cadastropet/registro',[CreatePetController::class,"Registro"])->name('registro.pet');
 Route::get('/listapets',[ListaPetsController::class,"ViewListaPets"])->name('lista.tela');
 Route::get('/testepet',[ListaPetsController::class,"jsonlist"])->name('testepet');
+Route::delete('/deletepet/{id}',[DeleteControllerPets::class,"delete"])->name("delete.pets");
 

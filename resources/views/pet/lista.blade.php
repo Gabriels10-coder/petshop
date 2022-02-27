@@ -16,14 +16,24 @@
             <tbody id="tbody">
                 @foreach ($animais as $item)
                     <tr scope="row">
-                        <td scope="col">{{ $item['id'] }}</td>
+                        <td  scope="col">{{ $item['id'] }}</td>
                         <td scope="col">{{ $item['nome'] }}</td>
-                        <td scope="col">{{$item['idade'] }}</td>
+                        <td scope="col">{{ $item['idade'] }}</td>
                         <td scope="col">{{ $item['raça'] }}</td>
                         <td scope="col">{{ $item['peso'] }}</td>
                         <td scope="col">{{ $item['dono'] }}</td>
-                        <td class="md-8" scope="col"><button class="btn btn-outline-primary">Deletar</button></td>
-                        <td scope="col"><button class="btn btn-outline-primary">Editar</button></td>
+                        <td scope="col">
+                            <form action="/deletepet/{{$item['id']}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                 <button  class="btn btn-outline-primary"type="submit">Deletar</button>
+                                <h6 id="msg-suc"></h6>
+                            </form>
+
+
+                        </td>
+
+
                     </tr>
                 @endforeach
             </tbody>
