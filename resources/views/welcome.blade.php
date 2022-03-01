@@ -1,4 +1,8 @@
 @extends('layouts.master')
+@section('titulo','Bem vindo ao petshop')
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/home.css') }}" />
+@endsection
 @section('conteudo')
     <section class="container">
             <div class=" d-flex justify-content-center container-imgcao" >

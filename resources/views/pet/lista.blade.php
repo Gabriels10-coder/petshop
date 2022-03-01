@@ -1,5 +1,8 @@
 @extends('layouts.master')
 @section('titulo', 'Tabela de pets')
+@section('styles')
+<link rel="stylesheet" href="{{asset('css/lista.css')}}"/>
+@endsection
 @section('conteudo')
     <section id="section" style=" margin-top:60px;">
         <table class="table  table-striped table-hover ">
@@ -16,24 +19,24 @@
             <tbody id="tbody">
                 @foreach ($animais as $item)
                     <tr scope="row">
-                        <td  scope="col">{{ $item['id'] }}</td>
+                        <td scope="col">{{ $item['id'] }}</td>
                         <td scope="col">{{ $item['nome'] }}</td>
                         <td scope="col">{{ $item['idade'] }}</td>
                         <td scope="col">{{ $item['raça'] }}</td>
                         <td scope="col">{{ $item['peso'] }}</td>
                         <td scope="col">{{ $item['dono'] }}</td>
                         <td scope="col">
-                            <form action="/deletepet/{{$item['id']}}" method="POST">
+                            <form class="container-form-delete" id="form" action="/deletepet/{{ $item['id'] }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                 <button  class="btn btn-outline-primary"type="submit">Deletar</button>
-                                <h6 id="msg-suc"></h6>
+                                <a class="btn btn-outline-primary "
+                                    onclick="document.getElementById('form').submit()">Deletar</a>
                             </form>
 
-
                         </td>
-
-
+                        <td>
+                            <a href="{{route('editar.pet')}}" class="btn btn-outline-primary">Editar</a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

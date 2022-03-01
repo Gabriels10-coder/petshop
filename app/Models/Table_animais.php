@@ -12,7 +12,7 @@ class Table_animais extends Model
         'idade',
         'peso',
         'raça',
-        'dono',
+       'especie',
 
     ];
 }

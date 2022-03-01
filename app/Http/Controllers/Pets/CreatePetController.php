@@ -26,9 +26,9 @@ class CreatePetController extends Controller
             'raça' => $request->raca,
             'peso' => $request->peso,
             'idade' => $request->idade,
-            'dono' => $request->dono
+            'especie' => $request->especie
         ]);
-        
+
 
 
         return redirect('/listapets');

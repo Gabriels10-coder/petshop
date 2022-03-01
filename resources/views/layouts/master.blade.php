@@ -6,24 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!--------- Google Fonts !------------>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
-    <!--------- End Google fonts !------------>
-    <!---------------! Bootstrap css !----------------->
     <link rel="stylesheet" href="{{ asset('bootstrap/style.css') }}" />
-    <!--------------! End Bootstrap css !------------->
-    <!--------------! CSS general !----------------->
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cadastro.css') }}">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
-    <link rel="stylesheet" href="{{asset('css/lista.css')}}"/>
-    <!--------------! End CSS general !------------->
-    <!-------------!  Title for page  !-------------->
+    @yield('styles')
     <title>@yield('titulo')</title>
-    <!------------! End Title for page !-------------->
 </head>
 <style>
     * {
@@ -50,7 +39,8 @@
                     <div class="navbar-nav">
                         <a class="nav-item nav-link fontlinks" href="{{ route('registro.tela') }}"
                             id="criarconta">Criar conta</a>
-                        <a class="nav-item nav-link fontlinks" href="{{route('home')}}" id="entrarnaconta">Entre na sua conta</a>
+                        <a class="nav-item nav-link fontlinks" href="{{ route('home') }}" id="entrarnaconta">Entre na sua
+                            conta</a>
                         <!--------Dropdown produtos !-------->
                         <div class="dropdown ">
                             <a class="nav-item nav-link navbar-toggle fontlinks" role="button" id="produtos"

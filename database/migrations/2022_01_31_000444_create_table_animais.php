@@ -15,11 +15,12 @@ class CreateTableAnimais extends Migration
     {
         Schema::create('table_animais', function (Blueprint $table) {
             $table->id();
+            $table->string('especie',128);
             $table->string('nome',128);
             $table->integer('idade');
             $table->string('raça',128);
             $table->string('peso',100);
-            $table->string('dono',128);
+            $table->string('dono',128)->nullable(true);
             $table->timestamps();
         });
     }

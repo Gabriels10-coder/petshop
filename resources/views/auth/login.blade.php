@@ -1,5 +1,7 @@
 @extends('layouts.master')
-
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/login.css') }}">
+@endsection
 @section('conteudo')
     <section class="container container--login">
         <form>
