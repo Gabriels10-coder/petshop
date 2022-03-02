@@ -1,13 +1,18 @@
 #test-container{
     display: grid;
 
-    grid-template-columns: 2fr 2fr ;
-    grid-template-columns: 60vh 80vh 50vh ;
+    grid-template-columns: 3fr 2fr ;
+    grid-template-rows: 50vh 50vh ;
      grid-template-areas: "n r" "p i" "e e";
+     grid-gap: 20px;
+
+
 
 }
 .nomeanimal{
 grid-area: n;
+justify-self: center;
+align-self: center;
 }
 .raça{
     grid-area: r;

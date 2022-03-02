@@ -10,6 +10,7 @@
             <form method="POST">
                 @csrf
                 @method("PUT")
+                <div style="display: flex; justify-content:center;">
                 <section id="test-container"  >
 
                     <div class="form-group nomeanimal">
@@ -34,7 +35,7 @@
                     </div>
                 </section>
 
-
+</div>
 
             </form>
 
