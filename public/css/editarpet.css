@@ -1,0 +1,26 @@
+#test-container{
+    display: grid;
+
+    grid-template-columns: 2fr 2fr ;
+    grid-template-columns: 60vh 80vh 50vh ;
+     grid-template-areas: "n r" "p i" "e e";
+
+}
+.nomeanimal{
+grid-area: n;
+}
+.raça{
+    grid-area: r;
+}
+.peso{
+    grid-area: p;
+
+}
+.idade{
+    grid-area: i;
+}
+
+
+.espec{
+    grid-area: e;
+}
