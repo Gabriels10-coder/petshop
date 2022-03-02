@@ -1,31 +1,52 @@
-#test-container{
+/* Layout  da página */
+main {
+    margin-top: 10%;
+}
+label{
+font-weight: bold;
+}
+.container--edit {
     display: grid;
-
-    grid-template-columns: 3fr 2fr ;
-    grid-template-rows: 50vh 50vh ;
-     grid-template-areas: "n r" "p i" "e e";
-     grid-gap: 20px;
-
-
-
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr ;
+    grid-template-areas:"titulo titulo" "nome raca" "peso idade" "especie especie" "buttons buttons";
+    grid-gap: 20px;
+    align-content: center;
+    justify-content: center;
 }
-.nomeanimal{
-grid-area: n;
-justify-self: center;
-align-self: center;
+.container--titulo{
+    grid-area: titulo;
 }
-.raça{
-    grid-area: r;
+.container--nome {
+    grid-area: nome;
 }
-.peso{
-    grid-area: p;
-
-}
-.idade{
-    grid-area: i;
+.container--raca {
+    grid-area: raca;
 }
 
-
-.espec{
-    grid-area: e;
+.container--peso {
+    grid-area: peso;
 }
+.container--idade {
+    grid-area: idade;
+}
+
+.container--espec {
+    grid-area: especie;
+}
+.container--buttons{
+    grid-area: buttons;
+    display: flex;
+    justify-content: end;
+}
+/* Estiliza button */
+.container--buttons button{
+    margin: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* muda cor do hover button */
+.container--buttons button:hover{
+    color:#ffff;
+}
+
