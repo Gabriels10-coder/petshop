@@ -16,7 +16,7 @@
                     </div>
                     <div class="container--nome">
                         <label class="form-label" for="nome">Nome do animal</label>
-                        <input class="form-control"  type="text" name="nome" id="nome" />
+                        <input class="form-control"  type="text" name="nome" id="nome" value={{$infos->nome ?? ""}} />
                     </div>
                     <div class="container--raca">
                         <label class="form-label"  for="raca">Raça</label>

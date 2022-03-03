@@ -19,12 +19,12 @@
             <tbody id="tbody">
                 @foreach ($animais as $item)
                     <tr scope="row">
-                        <td scope="col">{{ $item['id'] }}</td>
-                        <td scope="col">{{ $item['nome'] }}</td>
-                        <td scope="col">{{ $item['idade'] }}</td>
-                        <td scope="col">{{ $item['raça'] }}</td>
-                        <td scope="col">{{ $item['peso'] }}</td>
-                        <td scope="col">{{ $item['dono'] }}</td>
+                        <td scope="col">{{ $item->id }}</td>
+                        <td scope="col">{{ $item->nome}}</td>
+                        <td scope="col">{{ $item->idade}}</td>
+                        <td scope="col">{{ $item->raça}}</td>
+                        <td scope="col">{{ $item->peso }}</td>
+                        <td scope="col">{{ $item->dono }}</td>
                         <td scope="col">
                             <form class="container-form-delete" id="form" action="/deletepet/{{ $item['id'] }}" method="POST">
                                 @csrf
