@@ -2175,10 +2175,10 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
+  color: #ffff;
+  background-color:#000;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #ecc441;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2197,11 +2197,11 @@ progress {
   cursor: pointer;
 }
 .form-control:focus {
-  color: #212529;
-  background-color: #fff;
-  border-color: #ecc441;
+  color: #ffff;
+  background-color: #000;
+  border-color:1px solid #ecc441;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem #ecc441;
+  box-shadow: 0 0 0 0.10rem #ecc441;
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;

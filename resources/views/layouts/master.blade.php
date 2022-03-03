@@ -20,6 +20,10 @@
         padding: 0;
         margin: 0;
         box-sizing: border-box;
+        color:#ffff
+    }
+    body{
+        background-color:#000;
     }
 
 </style>
