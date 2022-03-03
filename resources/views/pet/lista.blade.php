@@ -35,7 +35,7 @@
 
                         </td>
                         <td>
-                            <a href="{{route('editar.pet')}}" class="btn btn-outline-primary">Editar</a>
+                            <a href="{{url("/pets/$item->id/editarpet")}}" class="btn btn-outline-primary">Editar</a>
                         </td>
                     </tr>
                 @endforeach

@@ -18,10 +18,10 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/',[HomeController::class,'index'])->name("home");
-Route::get('/cadastropet',[CreatePetController::class,'telaRegistro'])->name('registro.tela');
-Route::post('/cadastropet/registro',[CreatePetController::class,"Registro"])->name('registro.pet');
-Route::get('/listapets',[ListaPetsController::class,"ViewListaPets"])->name('lista.tela');
-Route::get('/testepet',[ListaPetsController::class,"jsonlist"])->name('testepet');
-Route::get('/editarpet',[EditarPetController::class,"viewEdit"])->name("editar.pet");
-Route::delete('/deletepet/{id}',[DeleteControllerPets::class,"delete"])->name("delete.pets");
+Route::get('pets/cadastropet',[CreatePetController::class,'telaRegistro'])->name('registro.tela');
+Route::post('pets/cadastropet/registro',[CreatePetController::class,"Registro"])->name('registro.pet');
+Route::get('pets/listapets',[ListaPetsController::class,"ViewListaPets"])->name('lista.tela');
+Route::get('pets/testepet',[ListaPetsController::class,"jsonlist"])->name('testepet');
+Route::get('pets/{id}/editarpet/',[EditarPetController::class,"viewEdit"])->name("editar.pet");
+Route::delete('pets/deletepet/{id}',[DeleteControllerPets::class,"delete"])->name("delete.pets");
 

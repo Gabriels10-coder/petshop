@@ -12,4 +12,5 @@ class EditarPetController extends Controller
 
         return view('pet.editar');
     }
+   
 }

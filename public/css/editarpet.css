@@ -2,9 +2,13 @@
 main {
     margin-top: 10%;
 }
+/* Estiliza labels */
 label{
 font-weight: bold;
-color:
+font-size: 18px;
+}
+h1{
+    font-weight:700;
 }
 .container--edit {
     display: grid;
@@ -47,7 +51,4 @@ color:
     font-weight: bold;
 }
 /* muda cor do hover button */
-.container--buttons button:hover{
-    color:#ffff;
-}
 
