@@ -10,8 +10,21 @@ class DeleteControllerPets extends Controller
 {
     public function delete($id)
     {
-        $pet =  Table_animais::findorfail($id)->delete();
+        $pet =  Table_animais::findorfail($id);
 
-        return redirect('/listapets');
+        if ($pet) {
+            $pet->delete();
+            $resposta = [
+                "success" => true,
+                "mensagem" => "Sucesso ao excluir"
+            ];
+            return response()->json($resposta, 200);
+        } else {
+            $resposta = [
+                "success" => false,
+                "mensagem" => "Falha ao excluir"
+            ];
+            return response()->json($resposta, 200);
+        }
     }
 }

@@ -26,7 +26,7 @@
                         <td scope="col">{{ $item->peso }}</td>
                         <td scope="col">{{ $item->dono }}</td>
                         <td scope="col">
-                            <form class="container-form-delete" id="form" action="/deletepet/{{ $item['id'] }}" method="POST">
+                            <form class="container-form-delete" id="form" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <a class="btn btn-outline-primary "
@@ -43,10 +43,10 @@
 
         </table>
     </section>
-
-@endsection
-@section('scripts')
-    <script src="{{ asset('js/listapet.js') }}"></script>
+   <p id="retorno"></p>
+   @if (session('msg'))
+   <p style="color:aqua">{{ session('msg') }}</p>
+@endif
 
 
 @endsection

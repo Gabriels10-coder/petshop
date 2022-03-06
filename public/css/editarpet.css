@@ -51,4 +51,9 @@ h1{
     font-weight: bold;
 }
 /* muda cor do hover button */
-
+/* Retirar  estilo  padrão do html */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

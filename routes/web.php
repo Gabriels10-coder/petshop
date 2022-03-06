@@ -17,6 +17,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+
 Route::get('/',[HomeController::class,'index'])->name("home");
 Route::get('pets/cadastropet',[CreatePetController::class,'telaRegistro'])->name('registro.tela');
 Route::post('pets/cadastropet/registro',[CreatePetController::class,"Registro"])->name('registro.pet');
@@ -24,4 +25,4 @@ Route::get('pets/listapets',[ListaPetsController::class,"ViewListaPets"])->name(
 Route::get('pets/testepet',[ListaPetsController::class,"jsonlist"])->name('testepet');
 Route::get('pets/{id}/editarpet/',[EditarPetController::class,"viewEdit"])->name("editar.pet");
 Route::delete('pets/deletepet/{id}',[DeleteControllerPets::class,"delete"])->name("delete.pets");
-
+Route::put("pets/updatepet/{id}",[EditarPetController::class,"updatePets"])->name("update.pets");

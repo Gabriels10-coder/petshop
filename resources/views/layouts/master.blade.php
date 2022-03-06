@@ -89,6 +89,7 @@
 <!---------! END Import Scripts !---------->
 <script src="{{ asset('jquery/jquery.js') }}"></script>
 <script src="{{ asset('bootstrap/bootstrap.js') }}"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @yield('scripts')
 <!---------! END Import Scripts !---------->
 
