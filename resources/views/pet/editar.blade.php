@@ -40,20 +40,11 @@
                         <button id="editar" type="submit" class="btn btn-outline-primary btn-person">Editar</button>
                         <button class="btn btn-outline-primary btn-person">Cancelar</button>
                         @if (session('msg'))
-                        <p style="color:red;text-align:center;">{{ session('msg') }}</p>
-                    @endif
+                            <p style="color:red;text-align:center;">{{ session('msg') }}</p>
+                        @endif
                     </div>
-
-
                 </form>
-
             </section>
-            <p id="id" style="display: none">{{ $infos->id }}</p>
-            <p style="color:aqua" id="retorno"></p>
-
-
-
-
         </section>
 
     </main>

@@ -4,6 +4,7 @@ use  App\Http\Controllers\Pets\CreatePetController;
 use App\Http\Controllers\Pets\ListaPetsController;
 use App\Http\Controllers\pets\DeleteControllerPets;
 use App\Http\Controllers\pets\EditarPetController;
+use App\Http\Controllers\user\userController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 /*
@@ -26,3 +27,6 @@ Route::get('pets/testepet',[ListaPetsController::class,"jsonlist"])->name('teste
 Route::get('pets/{id}/editarpet/',[EditarPetController::class,"viewEdit"])->name("editar.pet");
 Route::delete('pets/deletepet/{id}',[DeleteControllerPets::class,"delete"])->name("delete.pets");
 Route::put("pets/updatepet/{id}",[EditarPetController::class,"updatePets"])->name("update.pets");
+Route::post("pets/auth",[HomeController::class,"auth"])->name('auth.login');
+Route::post("createuser",[userController::class,"createUser"])->name("create.user");
+Route::get("registrousuario",[userController::class,"index"])->name("view.registro");

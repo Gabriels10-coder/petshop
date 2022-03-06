@@ -31,7 +31,7 @@ class CreatePetController extends Controller
 
 
 
-        return redirect('/listapets');
+        return redirect('pets/listapets');
     }
 }
 //c

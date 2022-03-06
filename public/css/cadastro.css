@@ -1,19 +1,39 @@
-    #sucesso {
-        width: 110%;
-        border-radius: 10px;
-        height: 50px;
-    }
-    
-    .distnavbar {
-        margin-top: 100px;
-    }
-    
-    .p {
-        text-align: center;
-    }
-    
-    .error {
-        margin-top: 8px;
-        font-weight: bold;
-        color: #ff0000;
-    }
+label{
+    font-weight: bold;
+}
+h1{
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+.dist-navbar {
+    margin-top: 100px;
+}
+.container--grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: "titulo titulo" "nome raca" "peso idade" "especie especie" "button button";
+    margin-top: 100px;
+    grid-gap:20px;
+}
+.container--titulo {
+    grid-area: titulo;
+}
+.container--nome {
+    grid-area: nome;
+}
+
+.container--raca {
+    grid-area: raca;
+}
+.container--peso{
+    grid-area: peso;
+}
+.container--idade{
+    grid-area: idade;
+}
+.container--btn{
+   grid-area: button;
+}

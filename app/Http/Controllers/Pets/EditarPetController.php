@@ -17,7 +17,7 @@ class EditarPetController extends Controller
     public function  updatePets(Request $request)
     {
         $search = Table_animais::findOrFail($request->id);
-        if (!$search) {
+        if ($search) {
 
             $search->update([
                 "nome" => $request->nome,
@@ -28,7 +28,6 @@ class EditarPetController extends Controller
 
             ]);
             return redirect('pets/listapets')->with('msg', "Parabens foi alterado");
-
         } else {
             return redirect()->back()->with('msg', 'erro ao alterar');
         }

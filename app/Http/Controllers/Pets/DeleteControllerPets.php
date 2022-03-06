@@ -12,19 +12,13 @@ class DeleteControllerPets extends Controller
     {
         $pet =  Table_animais::findorfail($id);
 
-        if ($pet) {
+        if (!$pet) {
             $pet->delete();
-            $resposta = [
-                "success" => true,
-                "mensagem" => "Sucesso ao excluir"
-            ];
-            return response()->json($resposta, 200);
+
+            return redirect()->back()->with("msg","Sucesso ao excluir");
         } else {
-            $resposta = [
-                "success" => false,
-                "mensagem" => "Falha ao excluir"
-            ];
-            return response()->json($resposta, 200);
+
+            return redirect()->back()->with("msg","Falha ao excluir");
         }
     }
 }
